@@ -1,9 +1,9 @@
 const main = document.getElementById('main');
-const addUserBtn = document.getElementById('add-user');
+const addUserBtn = document.getElementById('add_user');
 const doubleBtn = document.getElementById('double');
-const showMillionairesBtn = document.getElementById('show-millionaires');
+const showMillionairesBtn = document.getElementById('show_millionaires');
 const sortBtn = document.getElementById('sort');
-const calculateWealthBtn = document.getElementById('calculate-wealth');
+const calculateWealthBtn = document.getElementById('calculate_wealth');
 
 let data = [];
 
@@ -50,5 +50,8 @@ function updateDOM(provideData = data) {
 
 // Format number as money
 function formatMoney(number) {
-    return number.toFixed(2).replace(/\d(?=(\d{3})+\.)/g, '$&,');
+    return '$' + number.toFixed(2).replace(/\d(?=(\d{3})+\.)/g, '$&,');
 }
+
+// Event listeners
+addUserBtn.addEventListener('click', getRandomUser);

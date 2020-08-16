@@ -46,5 +46,5 @@ function updateDOM(provideData = data) {
 
 // Format number as money
 function formatMoney(number) {
-    return '$' + number.toFixed(2).replace(/\d(?=(\d{3})+\.)/g, '$&,')
+    return number.toFixed(2).replace(/\d(?=(\d{3})+\.)/g, '$&,');
 }

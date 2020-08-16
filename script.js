@@ -29,6 +29,8 @@ async function getRandomUser() {
 // Add new obj to data arr
 function addData(obj) {
     data.push(obj);
+
+    updateDOM();
 }
 
 // Update DOM

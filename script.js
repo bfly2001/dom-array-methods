@@ -35,6 +35,13 @@ function doubleMoney() {
     updateDOM();
 }
 
+//Sort users by richest
+function sortByRichest() {
+    data.sort((a, b) => b.money - a.money);
+
+    updateDOM();
+}
+
 // Add new obj to data arr
 function addData(obj) {
     data.push(obj);
